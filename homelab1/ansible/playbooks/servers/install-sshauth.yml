@@ -1,0 +1,23 @@
+- hosts: "{{ hosts }}"
+
+  become: yes
+  tasks:
+
+  # Deploy SSH Key
+  # --
+  - name: install public keys
+    ansible.posix.authorized_key:
+      user: "{{ user }}"
+      state: present
+      key: "{{ lookup('file', new_ssh_key_file) }}"  
+  
+
+  # Set all sudoers to no password
+  # --
+  - name: change sudoers file
+    lineinfile:
+      path: /etc/sudoers
+      state: present
+      regexp: '^%sudo'
+      line: '%sudo ALL=(ALL) NOPASSWD: ALL'
+      validate: /usr/sbin/visudo -cf %s

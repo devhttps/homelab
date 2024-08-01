@@ -1,0 +1,25 @@
+name: "Update DNS Records"
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'dns/dns-prod-1/terraform/*.tf'
+  workflow_dispatch:
+  
+defaults:
+  run:
+    working-directory: dns/dns-prod-1/terraform
+
+env:
+  TF_VAR_TSIG_KEY_HOME: ${{ secrets.WEBHOOK_URL_DNS_UPDATE }}
+
+jobs:
+  send_dns_update:
+    runs-on: "self-hosted"
+    steps:
+      # send webhook to update DNS records
+      - name: Send DNS Update Webhook
+        run: |
+          curl ${{ secrets.WEBHOOK_URL_DNS_UPDATE }}

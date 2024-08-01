@@ -3,7 +3,7 @@
     <img src="https://raw.githubusercontent.com/tteck/Proxmox/main/misc/images/logo.png" height="100px" />
  </a>
 </div>
-<h1 align="center">Proxmox VE Helper-Scripts</h1>
+<h1 align="center">Homelab Helper-Scripts</h1>
 
 <p align="center">
   <a href="https://helper-scripts.com">Website</a> | 
