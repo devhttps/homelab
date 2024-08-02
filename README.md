@@ -1,9 +1,9 @@
 <div align="center">
   <a href="#">
-    <img src="https://raw.githubusercontent.com/tteck/Proxmox/main/misc/images/logo.png" height="100px" />
+    <img src="https://mir-s3-cdn-cf.behance.net/user/115/dfd9e04508745.57ba9f632f0d5.png" height="100px" />
  </a>
 </div>
-<h1 align="center">Homelab Helper-Scripts</h1>
+<h1 align="center">Homelab YuxTec</h1>
 
 <p align="center">
   <a href="https://helper-scripts.com">Website</a> | 

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -s https://github.com/devhttps/homelab/blob/main/misc/build.func)
+source <(curl -s https://raw.githubusercontent.com/devhttps/homelab/main/misc/build.func)
 # Copyright (c) 2024 devhttps
 # Author: Guilherme (devhttps)
 # License: MIT
-# https://github.com/devhttps/homelab/raw/main/LICENSE
+# https://github.com/devhttps/homelab/blob/main/LICENSE
 
 function header_info {
 clear
