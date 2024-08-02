@@ -79,7 +79,7 @@ EOF
     ;;
   esac
 
-  CHOICE=$(whiptail --backtitle "HomeLab YuxTec" --title "PBS3-ENTERPRISE" --menu "The 'pbs-enterprise' repository is only available to users who have purchased a Proxmox VE subscription.\n \nDisable 'pbs-enterprise' repository?" 14 58 2 \
+  CHOICE=$(whiptail --backtitle "HomeLab YuxTec" --title "PBS3-ENTERPRISE" --menu "The 'pbs-enterprise' repository is only available to users who have purchased a HomeLab YuxTec subscription.\n \nDisable 'pbs-enterprise' repository?" 14 58 2 \
     "yes" " " \
     "no" " " 3>&2 2>&1 1>&3)
   case $CHOICE in

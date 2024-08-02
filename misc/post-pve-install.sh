@@ -47,26 +47,26 @@ msg_error() {
 start_routines() {
   header_info
 
-  CHOICE=$(whiptail --backtitle "HomeLab YuxTec" --title "SOURCES" --menu "The package manager will use the correct sources to update and install packages on your Proxmox VE server.\n \nCorrect Proxmox VE sources?" 14 58 2 \
+  CHOICE=$(whiptail --backtitle "HomeLab YuxTec" --title "SOURCES" --menu "The package manager will use the correct sources to update and install packages on your HomeLab YuxTec server.\n \nCorrect HomeLab YuxTec sources?" 14 58 2 \
     "yes" " " \
     "no" " " 3>&2 2>&1 1>&3)
   case $CHOICE in
   yes)
-    msg_info "Correcting Proxmox VE Sources"
+    msg_info "Correcting HomeLab YuxTec Sources"
     cat <<EOF >/etc/apt/sources.list
 deb http://deb.debian.org/debian bookworm main contrib
 deb http://deb.debian.org/debian bookworm-updates main contrib
 deb http://security.debian.org/debian-security bookworm-security main contrib
 EOF
 echo 'APT::Get::Update::SourceListWarnings::NonFreeFirmware "false";' >/etc/apt/apt.conf.d/no-bookworm-firmware.conf
-    msg_ok "Corrected Proxmox VE Sources"
+    msg_ok "Corrected HomeLab YuxTec Sources"
     ;;
   no)
-    msg_error "Selected no to Correcting Proxmox VE Sources"
+    msg_error "Selected no to Correcting HomeLab YuxTec Sources"
     ;;
   esac
 
-  CHOICE=$(whiptail --backtitle "HomeLab YuxTec" --title "PVE-ENTERPRISE" --menu "The 'pve-enterprise' repository is only available to users who have purchased a Proxmox VE subscription.\n \nDisable 'pve-enterprise' repository?" 14 58 2 \
+  CHOICE=$(whiptail --backtitle "HomeLab YuxTec" --title "PVE-ENTERPRISE" --menu "The 'pve-enterprise' repository is only available to users who have purchased a HomeLab YuxTec subscription.\n \nDisable 'pve-enterprise' repository?" 14 58 2 \
     "yes" " " \
     "no" " " 3>&2 2>&1 1>&3)
   case $CHOICE in
@@ -82,7 +82,7 @@ EOF
     ;;
   esac
 
-  CHOICE=$(whiptail --backtitle "HomeLab YuxTec" --title "PVE-NO-SUBSCRIPTION" --menu "The 'pve-no-subscription' repository provides access to all of the open-source components of Proxmox VE.\n \nEnable 'pve-no-subscription' repository?" 14 58 2 \
+  CHOICE=$(whiptail --backtitle "HomeLab YuxTec" --title "PVE-NO-SUBSCRIPTION" --menu "The 'pve-no-subscription' repository provides access to all of the open-source components of HomeLab YuxTec.\n \nEnable 'pve-no-subscription' repository?" 14 58 2 \
     "yes" " " \
     "no" " " 3>&2 2>&1 1>&3)
   case $CHOICE in
@@ -188,33 +188,33 @@ EOF
     esac
   fi
   
-  CHOICE=$(whiptail --backtitle "HomeLab YuxTec" --title "UPDATE" --menu "\nUpdate Proxmox VE now?" 11 58 2 \
+  CHOICE=$(whiptail --backtitle "HomeLab YuxTec" --title "UPDATE" --menu "\nUpdate HomeLab YuxTec now?" 11 58 2 \
     "yes" " " \
     "no" " " 3>&2 2>&1 1>&3)
   case $CHOICE in
   yes)
-    msg_info "Updating Proxmox VE (Patience)"
+    msg_info "Updating HomeLab YuxTec (Patience)"
     apt-get update &>/dev/null
     apt-get -y dist-upgrade &>/dev/null
-    msg_ok "Updated Proxmox VE"
+    msg_ok "Updated HomeLab YuxTec"
     ;;
   no)
-    msg_error "Selected no to Updating Proxmox VE"
+    msg_error "Selected no to Updating HomeLab YuxTec"
     ;;
   esac
 
-  CHOICE=$(whiptail --backtitle "HomeLab YuxTec" --title "REBOOT" --menu "\nReboot Proxmox VE now? (recommended)" 11 58 2 \
+  CHOICE=$(whiptail --backtitle "HomeLab YuxTec" --title "REBOOT" --menu "\nReboot HomeLab YuxTec now? (recommended)" 11 58 2 \
     "yes" " " \
     "no" " " 3>&2 2>&1 1>&3)
   case $CHOICE in
   yes)
-    msg_info "Rebooting Proxmox VE"
+    msg_info "Rebooting HomeLab YuxTec"
     sleep 2
     msg_ok "Completed Post Install Routines"
     reboot
     ;;
   no)
-    msg_error "Selected no to Rebooting Proxmox VE (Reboot recommended)"
+    msg_error "Selected no to Rebooting HomeLab YuxTec (Reboot recommended)"
     msg_ok "Completed Post Install Routines"
     ;;
   esac
@@ -223,7 +223,7 @@ EOF
 header_info
 echo -e "\nThis script will Perform Post Install Routines.\n"
 while true; do
-  read -p "Start the Proxmox VE Post Install Script (y/n)?" yn
+  read -p "Start the HomeLab YuxTec Post Install Script (y/n)?" yn
   case $yn in
   [Yy]*) break ;;
   [Nn]*) clear; exit ;;

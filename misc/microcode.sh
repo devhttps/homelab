@@ -107,7 +107,7 @@ amd() {
 
 if ! command -v pveversion >/dev/null 2>&1; then header_info; msg_error "No PVE Detected!"; exit; fi
 
-whiptail --backtitle "HomeLab YuxTec" --title "Proxmox VE Processor Microcode" --yesno "This will check for CPU microcode packages with the option to install. Proceed?" 10 58 || exit
+whiptail --backtitle "HomeLab YuxTec" --title "HomeLab YuxTec Processor Microcode" --yesno "This will check for CPU microcode packages with the option to install. Proceed?" 10 58 || exit
 
 msg_info "Checking CPU Vendor"
 cpu=$(lscpu | grep -oP 'Vendor ID:\s*\K\S+' | head -n 1)

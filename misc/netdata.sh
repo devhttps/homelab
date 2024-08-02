@@ -42,7 +42,7 @@ function msg_ok() {
 install() {
   header_info
   while true; do
-    read -p "Are you sure you want to install NetData on Proxmox VE host. Proceed(y/n)?" yn
+    read -p "Are you sure you want to install NetData on HomeLab YuxTec host. Proceed(y/n)?" yn
     case $yn in
     [Yy]*) break ;;
     [Nn]*) exit ;;
@@ -102,8 +102,8 @@ if ! pveversion | grep -Eq "pve-manager/(8\.[0-9])"; then
   exit
 fi
 
-OPTIONS=(Install "Install NetData on Proxmox VE" \
-         Uninstall "Uninstall NetData from Proxmox VE")
+OPTIONS=(Install "Install NetData on HomeLab YuxTec" \
+         Uninstall "Uninstall NetData from HomeLab YuxTec")
 
 CHOICE=$(whiptail --backtitle "HomeLab YuxTec" --title "NetData" --menu "Select an option:" 10 58 2 \
           "${OPTIONS[@]}" 3>&1 1>&2 2>&3)

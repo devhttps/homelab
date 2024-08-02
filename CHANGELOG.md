@@ -361,7 +361,7 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 ### Changed
 
-- **Proxmox VE Post Install**
+- **HomeLab YuxTec Post Install**
   - ~Requires Proxmox Virtual Environment Version 8.1.1 or later.~
   - Requires Proxmox Virtual Environment Version 8.0 or later.
 - **Proxmox Backup Server LXC**
@@ -392,7 +392,7 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 ### Changed
 
-- **Proxmox VE Post Install**
+- **HomeLab YuxTec Post Install**
   - Requires Proxmox Virtual Environment Version 8.1.1 or later.
 
 ## 2024-02-26
@@ -427,7 +427,7 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 ### Changed
 
-- **Proxmox VE LXC Filesystem Trim**
+- **HomeLab YuxTec LXC Filesystem Trim**
   - NEW Script ([more info](https://github.com/tteck/Proxmox/discussions/2505#discussion-6226037))
 
 ## 2024-02-11
@@ -558,7 +558,7 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 ### Changed
 
-- **Proxmox VE Netdata**
+- **HomeLab YuxTec Netdata**
   - NEW Script
 
 ## 2023-12-10
@@ -684,7 +684,7 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 ### Changed
 
-- **Proxmox VE CPU Scaling Governor**
+- **HomeLab YuxTec CPU Scaling Governor**
   - A full code overhaul.
   - Include an option to configure a crontab for ensuring that the CPU Scaling Governor configuration persists across reboots.
 
@@ -692,7 +692,7 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 ### Changed
 
-- **Proxmox VE LXC Updater**
+- **HomeLab YuxTec LXC Updater**
   - Now displays which containers require a reboot.
 - **File Browser**
   - Uninstall by re-executing the script
@@ -723,7 +723,7 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 ### Changed
 
-- **Proxmox VE Processor Microcode**
+- **HomeLab YuxTec Processor Microcode**
   - Allow users to select available microcode packages.
 
 ## 2023-09-13
@@ -732,7 +732,7 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 - **Pi.Alert LXC**
   - NEW Script
-- **Proxmox VE Kernel Clean**
+- **HomeLab YuxTec Kernel Clean**
   - Code overhaul with a fresh start. This script offers the flexibility to select specific kernels for removal, unlike the previous version, which was an all-or-nothing approach.
 
 ## 2023-09-11
@@ -753,21 +753,21 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 ### Changed
 
-- **Proxmox VE Host Backup**
+- **HomeLab YuxTec Host Backup**
   - Users are now able to specify both the backup path and the directory in which they wish to work.
 
 ## 2023-09-07
 
 ### Changed
 
-- **Proxmox VE Host Backup**
+- **HomeLab YuxTec Host Backup**
   - NEW Script
 
 ## 2023-09-06
 
 ### Changed
 
-- **Proxmox VE LXC Cleaner**
+- **HomeLab YuxTec LXC Cleaner**
   - Added a new menu that allows you to choose which containers you want to exclude from the clean process.
 - **Tailscale**
   - Added a menu that enables you to choose the specific container where you want to install Tailscale.
@@ -776,7 +776,7 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 ### Changed
 
-- **Proxmox VE LXC Updater**
+- **HomeLab YuxTec LXC Updater**
   - Added a new menu that allows you to choose which containers you want to exclude from the update process.
 
 ## 2023-09-01
@@ -846,7 +846,7 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 ### Changed
 
-- **Proxmox VE Processor Microcode**
+- **HomeLab YuxTec Processor Microcode**
   - AMD microcode-20230808 Release
 
 ## 2023-08-09
@@ -855,7 +855,7 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 - **Omada Controller LXC**
   - Update via script
-- **Proxmox VE Processor Microcode**
+- **HomeLab YuxTec Processor Microcode**
   - [Intel microcode-20230808 Release](https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/releases/tag/microcode-20230808)
 
 ## 2023-08-01
@@ -885,7 +885,7 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 ### Changed
 
-- **Proxmox VE Cron LXC Updater**
+- **HomeLab YuxTec Cron LXC Updater**
   - NEW Script
 
 ## 2023-07-11
@@ -906,7 +906,7 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 ### Changed
 
-- There have been more than 110 commits since June 18th, although not all of them are significant, with a majority focused on ensuring compatibility with Proxmox VE 8 and Debian 12.
+- There have been more than 110 commits since June 18th, although not all of them are significant, with a majority focused on ensuring compatibility with HomeLab YuxTec 8 and Debian 12.
 
 ## 2023-06-18
 
@@ -927,37 +927,37 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 ### Changed
 
-- **Proxmox VE Monitor-All**
+- **HomeLab YuxTec Monitor-All**
   - Skip instances based on onboot and templates. [8c2a3cc](https://github.com/tteck/Proxmox/commit/8c2a3cc4d774fa13d17f695d6bdf9a4deedb1372). 
 
 ## 2023-06-12
 
 ### Changed
 
-- **Proxmox VE Edge Kernel**
+- **HomeLab YuxTec Edge Kernel**
   - Removed, with the Proxmox opt-in kernels and the upcoming Proxmox Virtual Environment 8, edge kernels are no longer needed.
-- **Proxmox VE Kernel Clean**
+- **HomeLab YuxTec Kernel Clean**
   - Now compatible with PVE8.
 
 ## 2023-06-11
 
 ### Changed
 
-- **Proxmox VE Post Install**
+- **HomeLab YuxTec Post Install**
   - Now compatible with both Proxmox Virtual Environment 7 (PVE7) and Proxmox Virtual Environment 8 (PVE8). 
 
 ## 2023-06-02
 
 ### Changed
 
-- **Proxmox VE 7 Post Install**
+- **HomeLab YuxTec 7 Post Install**
   - In a non-clustered environment, you can choose to disable high availability, which helps save system resources.
 
 ## 2023-05-27
 
 ### Changed
 
-- **Proxmox VE 7 Post Install**
+- **HomeLab YuxTec 7 Post Install**
   - If an Intel N-series processor is detected, ~the script provides options to install both the Proxmox 6.2 kernel and the Intel microcode.~ and using PVE7, recommend using PVE8
 
 ## 2023-05-23
@@ -980,9 +980,9 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 ### Changed
 
-- **Proxmox VE LXC Updater**
+- **HomeLab YuxTec LXC Updater**
   - Add information about the boot disk, which provides an easy way to determine if you need to expand the disk.
-- **Proxmox VE Processor Microcode**
+- **HomeLab YuxTec Processor Microcode**
   - [Intel microcode-20230512 Release](https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/releases/tag/microcode-20230512)
 
 ## 2023-05-13
@@ -1003,8 +1003,8 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 ### Changed
 
-- **Proxmox VE Intel Processor Microcode**
-  - Renamed to **Proxmox VE Processor Microcode**
+- **HomeLab YuxTec Intel Processor Microcode**
+  - Renamed to **HomeLab YuxTec Processor Microcode**
   - Automatically identifies the processor vendor (Intel/AMD) and installs the appropriate microcode.
 
 ## 2023-05-07
@@ -1020,22 +1020,22 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 - **OctoPrint LXC**
   - NEW Script
-- **Proxmox VE Intel Processor Microcode**
+- **HomeLab YuxTec Intel Processor Microcode**
   - NEW Script
 
 ## 2023-04-30
 
 ### Changed
 
-- **Proxmox VE Monitor-All**
+- **HomeLab YuxTec Monitor-All**
   - NEW Script
-  - Replaces Proxmox VE LXC Monitor
+  - Replaces HomeLab YuxTec LXC Monitor
 
 ## 2023-04-28
 
 ### Changed
 
-- **Proxmox VE LXC Monitor**
+- **HomeLab YuxTec LXC Monitor**
   - NEW Script
 
 ## 2023-04-26
@@ -1852,7 +1852,7 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 - **v3 Script**
   - ADD Internet Connection Check
-- **Proxmox VE 7 Post Install**
+- **HomeLab YuxTec 7 Post Install**
   - NEW v3 Script
 - **Proxmox Kernel Clean**
   - NEW v3 Script
@@ -1897,7 +1897,7 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 
 - **Proxmox LXC Updater**
   - ADD option to skip stopped containers
-- **Proxmox VE 7 Post Install**
+- **HomeLab YuxTec 7 Post Install**
   - ADD PVE 7 check
 
 ## 2022-04-10
@@ -2302,7 +2302,7 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 - **Home Assistant OS VM** 
   - change disk type from SATA to SCSI to follow Proxmox official recommendations of choosing VirtIO-SCSI with SCSI disk
   - clean up
-- **Proxmox VE 7 Post Install** 
+- **HomeLab YuxTec 7 Post Install** 
   - new *No-Nag* method
 - **misc**
   - new GUI script to copy data from one Home Assistant LXC to another Home Assistant LXC

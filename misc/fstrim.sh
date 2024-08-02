@@ -30,7 +30,7 @@ if [ "$ROOT_FS" != "ext4" ]; then
     exit 1
 fi
 
-whiptail --backtitle "HomeLab YuxTec" --title "Proxmox VE LXC Filesystem Trim" --yesno "The LXC containers will undergo the fstrim command. Proceed?" 10 58 || exit
+whiptail --backtitle "HomeLab YuxTec" --title "HomeLab YuxTec LXC Filesystem Trim" --yesno "The LXC containers will undergo the fstrim command. Proceed?" 10 58 || exit
 NODE=$(hostname)
 EXCLUDE_MENU=()
 MSG_MAX_LENGTH=0

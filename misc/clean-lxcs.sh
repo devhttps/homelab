@@ -23,7 +23,7 @@ GN=$(echo "\033[1;92m")
 CL=$(echo "\033[m")
 header_info
 echo "Loading..."
-whiptail --backtitle "HomeLab YuxTec" --title "Proxmox VE LXC Updater" --yesno "This Will Clean logs, cache and update apt lists on selected LXC Containers. Proceed?" 10 58 || exit
+whiptail --backtitle "HomeLab YuxTec" --title "HomeLab YuxTec LXC Updater" --yesno "This Will Clean logs, cache and update apt lists on selected LXC Containers. Proceed?" 10 58 || exit
 NODE=$(hostname)
 EXCLUDE_MENU=()
 MSG_MAX_LENGTH=0

@@ -37,7 +37,7 @@ function msg_ok() {
   echo -e "${BFR} ${CM} ${GN}${msg}${CL}"
 }
 
-whiptail --backtitle "HomeLab YuxTec" --title "Proxmox VE Kernel Clean" --yesno "This will Clean Unused Kernel Images, USE AT YOUR OWN RISK. Proceed?" 10 68 || exit
+whiptail --backtitle "HomeLab YuxTec" --title "HomeLab YuxTec Kernel Clean" --yesno "This will Clean Unused Kernel Images, USE AT YOUR OWN RISK. Proceed?" 10 68 || exit
 if [ -z "$available_kernels" ]; then
   whiptail --backtitle "HomeLab YuxTec" --title "No Old Kernels" --msgbox "It appears there are no old Kernels on your system. \nCurrent kernel ($current_kernel)." 10 68
   echo "Exiting..."

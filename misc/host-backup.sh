@@ -48,7 +48,7 @@ function perform_backup {
   # Allow the user to select directories
   local HOST_BACKUP
   while [ -z "${HOST_BACKUP:+x}" ]; do
-    HOST_BACKUP=$(whiptail --backtitle "Proxmox VE Host Backup" --title "Working in the ${DIR} directory " --checklist \
+    HOST_BACKUP=$(whiptail --backtitle "HomeLab YuxTec Host Backup" --title "Working in the ${DIR} directory " --checklist \
       "\nSelect what files/directories to backup:\n" 16 $(((${#DIRNAME} + 2) + 88)) 6 "${CTID_MENU[@]}" 3>&1 1>&2 2>&3) || return
 
     for selected_dir in ${HOST_BACKUP//\"/}; do
@@ -71,7 +71,7 @@ function perform_backup {
 
 # Main script execution loop
 while true; do
-  if (whiptail --backtitle "HomeLab YuxTec" --title "Proxmox VE Host Backup" --yesno "This will create backups for particular files and directories located within a designated directory. Proceed?" 10 88); then
+  if (whiptail --backtitle "HomeLab YuxTec" --title "HomeLab YuxTec Host Backup" --yesno "This will create backups for particular files and directories located within a designated directory. Proceed?" 10 88); then
     perform_backup
   else
     break

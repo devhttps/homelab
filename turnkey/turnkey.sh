@@ -51,7 +51,7 @@ function cleanup_ctid() {
   fi
 }
 
-# Stop Proxmox VE Monitor-All if running
+# Stop HomeLab YuxTec Monitor-All if running
 if systemctl is-active -q ping-instances.service; then
   systemctl stop ping-instances.service
 fi
@@ -224,7 +224,7 @@ if [[ -z $IP ]]; then
   IP="NOT FOUND"
 fi
 
-# Start Proxmox VE Monitor-All if available
+# Start HomeLab YuxTec Monitor-All if available
 if [[ -f /etc/systemd/system/ping-instances.service ]]; then
   systemctl start ping-instances.service
 fi

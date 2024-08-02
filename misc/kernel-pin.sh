@@ -37,7 +37,7 @@ function msg_ok() {
   echo -e "${BFR} ${CM} ${GN}${msg}${CL}"
 }
 
-whiptail --backtitle "HomeLab YuxTec" --title "Proxmox VE Kernel Pin" --yesno "This will Pin/Unpin Kernel Images, Proceed?" 10 68 || exit
+whiptail --backtitle "HomeLab YuxTec" --title "HomeLab YuxTec Kernel Pin" --yesno "This will Pin/Unpin Kernel Images, Proceed?" 10 68 || exit
 
   KERNEL_MENU=()
   MSG_MAX_LENGTH=0
@@ -59,7 +59,7 @@ pin_kernel=$(whiptail --backtitle "HomeLab YuxTec" --title "Current Kernel $curr
   echo -e "${RD} REBOOT${CL}"
   exit
 }
-whiptail --backtitle "HomeLab YuxTec" --title "Proxmox VE Kernel Pin" --yesno "Would you like to pin the $pin_kernel Kernel?" 10 68 || exit
+whiptail --backtitle "HomeLab YuxTec" --title "HomeLab YuxTec Kernel Pin" --yesno "Would you like to pin the $pin_kernel Kernel?" 10 68 || exit
 
 msg_info "Pinning $pin_kernel"
 proxmox-boot-tool kernel pin $pin_kernel &>/dev/null

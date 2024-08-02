@@ -17,7 +17,7 @@ EOF
 
 add() {
 while true; do
-  read -p "This script will add Monitor All to Proxmox VE. Proceed(y/n)?" yn
+  read -p "This script will add Monitor All to HomeLab YuxTec. Proceed(y/n)?" yn
   case $yn in
   [Yy]*) break ;;
   [Nn]*) exit ;;
@@ -137,15 +137,15 @@ remove() {
   systemctl disable -q --now ping-instances.timer
   systemctl disable -q --now ping-instances.service
   rm /etc/systemd/system/ping-instances.service /etc/systemd/system/ping-instances.timer /usr/local/bin/ping-instances.sh /var/log/ping-instances.log
-  echo "Removed Monitor All from Proxmox VE"
+  echo "Removed Monitor All from HomeLab YuxTec"
 }
 
 # Define options for the whiptail menu
-OPTIONS=(Add "Add Monitor-All to Proxmox VE" \
-         Remove "Remove Monitor-All from Proxmox VE")
+OPTIONS=(Add "Add Monitor-All to HomeLab YuxTec" \
+         Remove "Remove Monitor-All from HomeLab YuxTec")
 
 # Show the whiptail menu and save the user's choice
-CHOICE=$(whiptail --backtitle "HomeLab YuxTec" --title "Monitor-All for Proxmox VE" --menu "Select an option:" 10 58 2 \
+CHOICE=$(whiptail --backtitle "HomeLab YuxTec" --title "Monitor-All for HomeLab YuxTec" --menu "Select an option:" 10 58 2 \
           "${OPTIONS[@]}" 3>&1 1>&2 2>&3)
 
 # Check the user's choice and perform the corresponding action
