@@ -54,7 +54,7 @@ function default_settings() {
 
 function update_script() {
 if [[ ! -d /root/.node-red ]]; then msg_error "No ${APP} Installation Found!"; exit; fi
-UPD=$(whiptail --backtitle "Proxmox VE Helper Scripts" --title "SUPPORT" --radiolist --cancel-button Exit-Script "Spacebar = Select" 11 58 2 \
+UPD=$(whiptail --backtitle "HomeLab YuxTec" --title "SUPPORT" --radiolist --cancel-button Exit-Script "Spacebar = Select" 11 58 2 \
   "1" "Update ${APP}" ON \
   "2" "Install Themes" OFF \
   3>&1 1>&2 2>&3)
@@ -82,7 +82,7 @@ msg_ok "Update Successful"
 exit
 fi
 if [ "$UPD" == "2" ]; then
-THEME=$(whiptail --backtitle "Proxmox VE Helper Scripts" --title "NODE-RED THEMES" --radiolist --cancel-button Exit-Script "Choose Theme" 15 58 6 \
+THEME=$(whiptail --backtitle "HomeLab YuxTec" --title "NODE-RED THEMES" --radiolist --cancel-button Exit-Script "Choose Theme" 15 58 6 \
     "aurora" "" OFF \
     "cobalt2" "" OFF \
     "dark" "" OFF \

@@ -1065,7 +1065,7 @@ Be cautious of copycat or coat-tailing sites that exploit the project's populari
 - **InfluxDB LXC**
   - Choosing InfluxDB v1 will result in Chronograf being installed automatically.
 - **[User Submitted Guides](https://github.com/tteck/Proxmox/blob/main/USER_SUBMITTED_GUIDES.md)**
-  -  Informative guides that demonstrate how to install various software packages using Proxmox VE Helper Scripts.
+  -  Informative guides that demonstrate how to install various software packages using HomeLab YuxTec.
 
 ## 2023-04-14
 

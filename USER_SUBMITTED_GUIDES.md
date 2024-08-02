@@ -5,7 +5,7 @@
 </div>
 <h2 align="center">User Submitted Guides </h2>
 
-<sub> In order to contribute a guide on installing with Proxmox VE Helper Scripts, you should open a pull request that adds the guide to the `USER_SUBMITTED_GUIDES.md` file. </sub>
+<sub> In order to contribute a guide on installing with HomeLab YuxTec, you should open a pull request that adds the guide to the `USER_SUBMITTED_GUIDES.md` file. </sub>
 
 [Proxmox Automation with Proxmox Helper Scripts!](https://www.youtube.com/watch?v=kcpu4z5eSEU)
 

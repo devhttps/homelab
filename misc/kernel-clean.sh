@@ -37,9 +37,9 @@ function msg_ok() {
   echo -e "${BFR} ${CM} ${GN}${msg}${CL}"
 }
 
-whiptail --backtitle "Proxmox VE Helper Scripts" --title "Proxmox VE Kernel Clean" --yesno "This will Clean Unused Kernel Images, USE AT YOUR OWN RISK. Proceed?" 10 68 || exit
+whiptail --backtitle "HomeLab YuxTec" --title "Proxmox VE Kernel Clean" --yesno "This will Clean Unused Kernel Images, USE AT YOUR OWN RISK. Proceed?" 10 68 || exit
 if [ -z "$available_kernels" ]; then
-  whiptail --backtitle "Proxmox VE Helper Scripts" --title "No Old Kernels" --msgbox "It appears there are no old Kernels on your system. \nCurrent kernel ($current_kernel)." 10 68
+  whiptail --backtitle "HomeLab YuxTec" --title "No Old Kernels" --msgbox "It appears there are no old Kernels on your system. \nCurrent kernel ($current_kernel)." 10 68
   echo "Exiting..."
   sleep 2
   clear
@@ -53,15 +53,15 @@ while read -r TAG ITEM; do
   KERNEL_MENU+=("$TAG" "$ITEM " "OFF")
 done < <(echo "$available_kernels")
 
-remove_kernels=$(whiptail --backtitle "Proxmox VE Helper Scripts" --title "Current Kernel $current_kernel" --checklist "\nSelect Kernels to remove:\n" 16 $((MSG_MAX_LENGTH + 58)) 6 "${KERNEL_MENU[@]}" 3>&1 1>&2 2>&3 | tr -d '"') || exit
+remove_kernels=$(whiptail --backtitle "HomeLab YuxTec" --title "Current Kernel $current_kernel" --checklist "\nSelect Kernels to remove:\n" 16 $((MSG_MAX_LENGTH + 58)) 6 "${KERNEL_MENU[@]}" 3>&1 1>&2 2>&3 | tr -d '"') || exit
 [ -z "$remove_kernels" ] && {
-  whiptail --backtitle "Proxmox VE Helper Scripts" --title "No Kernel Selected" --msgbox "It appears that no Kernel was selected" 10 68
+  whiptail --backtitle "HomeLab YuxTec" --title "No Kernel Selected" --msgbox "It appears that no Kernel was selected" 10 68
   echo "Exiting..."
   sleep 2
   clear
   exit
 }
-whiptail --backtitle "Proxmox VE Helper Scripts" --title "Remove Kernels" --yesno "Would you like to remove the $(echo $remove_kernels | awk '{print NF}') previously selected Kernels?" 10 68 || exit
+whiptail --backtitle "HomeLab YuxTec" --title "Remove Kernels" --yesno "Would you like to remove the $(echo $remove_kernels | awk '{print NF}') previously selected Kernels?" 10 68 || exit
 
 msg_info "Removing ${CL}${RD}$(echo $remove_kernels | awk '{print NF}') ${CL}${YW}old Kernels${CL}"
 /usr/bin/apt purge -y $remove_kernels >/dev/null 2>&1

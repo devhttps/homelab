@@ -59,14 +59,14 @@ function update_script() {
   fi
   PY=$(ls /srv/homeassistant/lib/)
   IP=$(hostname -I | awk '{print $1}')
-  UPD=$(whiptail --backtitle "Proxmox VE Helper Scripts" --title "UPDATE" --radiolist --cancel-button Exit-Script "Spacebar = Select" 11 58 4 \
+  UPD=$(whiptail --backtitle "HomeLab YuxTec" --title "UPDATE" --radiolist --cancel-button Exit-Script "Spacebar = Select" 11 58 4 \
     "1" "Update Core" ON \
     "2" "Install HACS" OFF \
     "3" "Install FileBrowser" OFF \
     3>&1 1>&2 2>&3)
   header_info
   if [ "$UPD" == "1" ]; then
-    if (whiptail --backtitle "Proxmox VE Helper Scripts" --defaultno --title "SELECT BRANCH" --yesno "Use Beta Branch?" 10 58); then
+    if (whiptail --backtitle "HomeLab YuxTec" --defaultno --title "SELECT BRANCH" --yesno "Use Beta Branch?" 10 58); then
       clear
       header_info
       echo -e "${GN}Updating to Beta Version${CL}"

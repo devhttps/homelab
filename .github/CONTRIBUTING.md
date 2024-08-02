@@ -3,9 +3,9 @@
     <img src="https://raw.githubusercontent.com/tteck/Proxmox/main/misc/images/logo.png" height="100px" />
  </a>
 </div>
-<h2 align="center">Contributing to Proxmox VE Helper Scripts</h2>
+<h2 align="center">Contributing to HomeLab YuxTec</h2>
 
-Everybody is invited and welcome to contribute to Proxmox VE Helper Scripts. 
+Everybody is invited and welcome to contribute to HomeLab YuxTec. 
 
 - Pull requests submitted against [**main**](https://github.com/tteck/Proxmox/tree/main) are meticulously scrutinized, so please do not take it personally if the project maintainer rejects your request. By adhering to the established patterns and conventions throughout the codebase, you greatly increase the likelihood that your changes will get merged into [**main**](https://github.com/tteck/Proxmox/tree/main).
 
